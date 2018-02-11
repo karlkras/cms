@@ -1,9 +1,9 @@
 # cms
 ## Setup
 - download/clone the git repository from
-  - `git clone https://github.com/paslandau/laravelexample.git`
+  - `git clone https://github.com/karlkras/cms.git`
 - navigate into the project folder
-  - `cd laravelexample`
+  - `cd cms`
 - make sure not to work directly on the master branch  
   - `git checkout -b my_local_branch`
 - to prepare the vagrant configuration, run
@@ -11,8 +11,9 @@
 - adjust the `hosts` file and the newly created `Homestead.yaml` in the root of the repo according to your needs. Usually that includes:
   - adjust `ip`
     - make sure the `ip` is not already used in your local network
-  - add an entry to your host file
-    - `[IP] laravelexample.app` (e.g. `192.168.33.111 laravelexample.app`)
+  - add a couple of entries to your host file
+    - `[IP] cms.test` (e.g. `192.168.33.111 cms.tet`)
+    - `[IP] phpmyadmin.test` (e.g. `192.168.33.111 phpmyadmin.test`)
     - location on Unix: `/etc/hosts`
     - location on Windows: `C:\Windows\System32\drivers\etc`
 - adjust `folders` and `sites` mapping (optional; it should be set up correctly by default if you followed the steps above).
@@ -35,4 +36,4 @@
   - `php artisan ide-helper:generate`
   - `php artisan ide-helper:model`
 
-You should now be able to open http://laravelexample.app/ in your browser and see the Laravel welcome page :)
+You should now be able to open http://cms.test/ and http://phpmyadmin.test/ in your browser and see the Laravel welcome page :)
