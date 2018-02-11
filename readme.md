@@ -12,8 +12,8 @@
   - adjust `ip`
     - make sure the `ip` is not already used in your local network
   - add a couple of entries to your host file
-    - `[IP] cms.test` (e.g. `192.168.33.111 cms.tet`)
-    - `[IP] phpmyadmin.test` (e.g. `192.168.33.111 phpmyadmin.test`)
+    - `[IP] cms.test` (e.g. `192.168.10.10 cms.tet`)
+    - `[IP] phpmyadmin.test` (e.g. `192.168.10.10 phpmyadmin.test`)
     - location on Unix: `/etc/hosts`
     - location on Windows: `C:\Windows\System32\drivers\etc`
 - adjust `folders` and `sites` mapping (optional; it should be set up correctly by default if you followed the steps above).
@@ -22,10 +22,10 @@
   - the `folders: to: "[PATH]"` denotes the path on your **vagrant** machine that is mapped to the above mentioned path on your local machine,
     so that you can access your local files within the vagrant box.
   - the `sites: - map: "[HOSTNAME]"` denotes the hostname that the nginx is looking for to serve content on
-    - you _should_ adjust that to the hostname chosen for your hostfile (e.g. `laravelexample.app`) although it not necessary since nginx will even respond to another hostname
+    - you _should_ adjust that to the hostname chosen for your hostfile (e.g. `cms.test`) although it not necessary since nginx will even respond to another hostname
   - the `sites: - to: "[PATH]"` denotes the absolute path withing the vagrant box that the above mentioned hostname uses as `root` path for content.
     This should be the path to the `public` folder of this repository
-- start the vagrant box with `vagrant up`, ssh into it with `vagrant ssh`, switch to the project folder (by default, this should be `cd /home/vagrant/laravelexample/`) and install the 
+- start the vagrant box with `vagrant up`, ssh into it with `vagrant ssh`, switch to the project folder (by default, this should be `cd /home/vagrant/code/cms/`) and install the 
   project's dependencies
   - `composer install`
 - setup laravel by generating an application key and setting up the .env file:
